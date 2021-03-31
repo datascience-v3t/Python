@@ -19,17 +19,23 @@ WhitbyREData = ["start"]
 
 for i in range(1, 190):
 	price = realestatedata.cell(row=i, column=4).value;
-	print(price);
+	 
 	houseType = realestatedata.cell(row=i, column=1).value;
-	print(houseType);
+	 
 	description = realestatedata.cell(row=i, column=2).value;
-	print(description);
+	 
 	numberBedrooms = realestatedata.cell(row=i, column=3).value;
-	print(numberBedrooms);
+	 
 
 	#type, description, number of bedrooms, price
 	solddetails = (houseType, description,numberBedrooms, price)
 	WhitbyREData.append(solddetails)
 
 for x in WhitbyREData:
-	print(x)
+	# print(x[0], x[1], x[2], x[3])
+	if x[0] == ("Detached"):	
+		print(x[3]) 
+
+# todo: 
+# do this with objects		
+# iterate over the Array : find the average of DETACHED house sales
